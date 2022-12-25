@@ -7,11 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!-- bootsrapt import -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.bundle.min.css"
-        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- import jquery cdn -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- import jquery cdn -->
 
     <!-- bootsrapt import -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- bootsrapt import -->
+
+
 
     <!-- import font awesome v6 cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -30,135 +35,51 @@
         crossorigin="" />
     <!-- leaflet import css -->
 
+    <!-- import leaflet library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw-src.js"></script>
+    <!-- import leaflet library -->
+
+    <style>
+        /* scrollable sidebar */
+        .sidebar {
+            position: fixed;
+            overflow-y: scroll;
+            top: 10;
+            bottom: 0;
+        }
+    </style>
+
 </head>
 
 <body>
-    <!-- admin lte navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-        <!-- Left navbar links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="index3.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link">Contact</a>
-            </li>
-        </ul>
-
-        <!-- SEARCH FORM -->
-        <form class="form-inline ml-3">
-            <div class="input-group input-group-sm">
-                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-navbar" type="submit">
-                        <i class="fas fa-search"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
-
-        <!-- Right navbar links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" data-widget="fullscreen" href="#" role="button">
-                    <i class="fas fa-expand-arrows-alt"></i>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-                    <i class="fas fa-th-large"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <!-- admin lte navbar -->
-
     <!-- adminlte sidebar for leaflet -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
             <img src="https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
                 class="brand-image img-circle elevation-3" style="opacity: .8">
-            <span class="brand-text font-weight-light">AdminLTE 3</span>
+            <span class="brand-text font-weight-light">Hernando Dio Palma</span>
         </a>
-
         <!-- Sidebar -->
         <div class="sidebar">
-
-
             <!-- Sidebar Menu -->
             <nav class="mt-2">
-                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
-                    data-accordion="false">
-                    <!-- Add icons to the links using the .nav-icon class
-                   with font-awesome or any other icon font library -->
-                    <li class="nav-item has-treeview menu-open">
-                        <a href="#" class="nav-link active">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
-                            <p>
-                                Starter Pages
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="pages/layout/top-nav.html" class="nav-link active">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Top Navigation</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/boxed.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Boxed</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/fixed-sidebar.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Fixed Sidebar</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Fixed Navbar</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/fixed-footer.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Fixed Footer</p>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Collapsed Sidebar</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="pages/widgets.html" class="nav-link">
-                            <i class="nav-icon fas fa-th"></i>
-                            <p>
-                                Widgets
-                                <span class="right badge badge-danger">New</span>
-                            </p>
-                        </a>
-                    </li>
-                </ul>
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu">
+                        <!-- menunya akan ditaruh disini-->
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
             </nav>
             <!-- /.sidebar-menu -->
         </div>
         <!-- /.sidebar -->
     </aside>
     <!-- adminlte sidebar for leaflet -->
-
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -168,14 +89,10 @@
                     <div class="col-sm-6">
                         <h1 class="m-0">Sistem Informasi Geografis</h1>
                     </div><!-- /.col -->
-                    <div class="col-sm-6">
-
-                    </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
         </div>
         <!-- /.content-header -->
-
         <!-- Main content -->
         <div class="content">
             <div class="container-fluid">
@@ -184,19 +101,17 @@
                         <!-- card content for leaflet-->
                         <div class="card card-dark">
                             <div class="card-header">
-                                <h3 class="card-title"> Kabupaten Bandung </h3>
+                                <h3 class="card-title"> Kota Bogor </h3>
                             </div>
                             <div class="card-body">
-                                <div id="mapid" style="height: 400px;"></div>
+                                <div id="map" style="height: 550px;"></div>
                             </div> <!-- card body for leaflet-->
                         </div> <!-- card content for leaflet-->
                     </div> <!-- /.col-md-6 -->
                 </div> <!-- /.row -->
             </div> <!-- /.container-fluid -->
         </div> <!-- /.content -->
-
     </div> <!-- /.content-wrapper -->
-
     <!-- main footer -->
     <footer class="main-footer">
         <!-- To the right -->
@@ -204,24 +119,74 @@
             UAS Semester Ganjil 2022/2023
         </div>
         <!-- Default to the left -->
-        <strong>Hernando Dio Palma &copy; 2020 <a href="#">Sistem Informasi Geografis</a>.</strong> Universitas Sultan
+        <strong>Hernando Dio Palma &copy; 2022 <a href="#">Sistem Informasi Geografis</a>.</strong> Universitas Sultan
         Ageng Tirtayasa.
     </footer>
     <!-- main footer -->
+    <script>
+        // create map kota bogor
+        var map = L.map('map').setView([-6.593990635182735, 106.79698875302518], 12);
+        // add tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        // add geojson file
+        var geojsonAreaLayer = new L.GeoJSON.AJAX(["data/kota_bogor_administrasi_desa.geojson"], {
+            style: function (feature) {
+                //random color
+                var color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+                return {
+                    color: color,
+                    weight: 1,
+                    opacity: 1,
+                    fillColor: color,
+                    fillOpacity: 0.5
+                };
+            },
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(feature.properties.NAMOBJ);
+                var str = '<li class="zoom nav-item">   <a href="javascript:void(0);" class="nav-link" id = zoomTo' + feature.properties.NAMOBJ.replace(/\s/g, "") + '><i class="nav-icon fas fa-th"></i><p>' + feature.properties.NAMOBJ + '</p></a></li>';
 
-    <!-- import leaflet library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw-src.js"></script>
-    <!-- import leaflet library -->
+                $('.nav-sidebar').append(str);
 
-    <!-- import jquery cdn -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <!-- import jquery cdn -->
+                $('#zoomTo' + feature.properties.NAMOBJ.replace(/\s/g, "")).click(function () {
+                    map.setView(layer.getBounds().getCenter(), 15);
+                });
 
+            },
+        }).addTo(map);
+
+        // add geojson file
+        var geojsonPendidikanLayer = new L.GeoJSON.AJAX(["data/kota_bogor_pendidikan.geojson"], {
+            style: function (feature) {
+                return {
+                    color: "#ff7800",
+                    weight: 2,
+                    opacity: 1,
+                    fillOpacity: 0.7
+                };
+            }
+        }).addTo(map);
+
+        // add geojson file
+        var geojsonKonturLayer = new L.GeoJSON.AJAX(["data/kota_bogor_kontur.geojson"], {
+            style: function (feature) {
+                return {
+                    color: "#ff7800",
+                    weight: 2,
+                    opacity: 1,
+                    fillOpacity: 0.7
+                };
+            }
+        }).addTo(map);
+        // on off layer legend check box
+        var baseMaps = {
+            "Administrasi Desa": geojsonAreaLayer,
+            "Pendidikan": geojsonPendidikanLayer,
+            "Kontur": geojsonKonturLayer
+        };
+        L.control.layers(baseMaps).addTo(map);
+    </script>
 </body>
 
 </html>
