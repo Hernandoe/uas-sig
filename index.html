@@ -59,7 +59,7 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="index3.html" class="brand-link">
-            <img src="https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
+            <img src="./img/logo.png" alt="AdminLTE Logo"
                 class="brand-image img-circle elevation-3" style="opacity: .8">
             <span class="brand-text font-weight-light">Hernando Dio Palma</span>
         </a>
@@ -87,7 +87,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Sistem Informasi Geografis</h1>
+                        <h1 class="m-0">Sistem Informasi Geografis | 3332190049</h1>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
             </div><!-- /.container-fluid -->
@@ -145,7 +145,7 @@
             },
             onEachFeature: function (feature, layer) {
                 layer.bindPopup(feature.properties.NAMOBJ);
-                var str = '<li class="zoom nav-item">   <a href="javascript:void(0);" class="nav-link" id = zoomTo' + feature.properties.NAMOBJ.replace(/\s/g, "") + '><i class="nav-icon fas fa-th"></i><p>' + feature.properties.NAMOBJ + '</p></a></li>';
+                var str = '<li class="zoom nav-item">   <a href="javascript:void(0);" class="nav-link" id = zoomTo' + feature.properties.NAMOBJ.replace(/\s/g, "") + '><i class="nav-icon fas fa-map-marker"></i><p>' + feature.properties.NAMOBJ + '</p></a></li>';
 
                 $('.nav-sidebar').append(str);
 
